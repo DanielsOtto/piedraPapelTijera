@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juego piedra papel o tijera</title>
-
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Scripts -->
     <script src="/scripts/main.js" async></script>
 </head>
 
 <body>
-    
-    <button id="piedra" value="piedra">piedra</button>
-    
-    <button id="papel" value="papel">papel</button>
-    
-    <button id="tijera" value="tijera">tijera</button>
+
+    <div id="boxGame" class="opcionesJuego">
+        <button id="piedra" value="piedra" class="boton" data-open="modal">piedra</button>
+
+        <button id="papel" value="papel" class="boton" data-open="modal">papel</button>
+
+        <button id="tijera" value="tijera" class="boton" data-open="modal">tijera</button>
+    </div>
+
+    <section id="modal" class="modal">
+
+    </section>
+
 </body>
+
 </html>

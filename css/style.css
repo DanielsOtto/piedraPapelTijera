@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+body{
+    height: auto;
+}
+.opcionesJuego {
+  background-color: cyan;
+  margin: 5% auto;
+  padding: 2%;
+  width: 65%;
+  height: 65%;
+  display: flex;
+  flex-flow: column wrap;
+}
+.boton {
+  background-color: orange;
+  color: black;
+  margin: 3% auto;
+  padding: 4%;
+  width: 20%;
+  height: 20%;
+  border-style: none;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.boton:hover {
+  cursor: pointer;
+  background-color: orangered;
+}
+.mayuscula{
+    text-transform: uppercase;
+}
+.user{
+    color: blue;
+}
+.pc{
+    color: red;
+}
+/*MODAL*/
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111bd;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .6s .9s;
+    --transform: translateY(-100vh);
+    --transition: transform .8s;
+}
+
+.modal--show{
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .6s;
+    --transform: translateY(0);
+    --transition: transform .8s .8s;
+}
+
+.modal__container{
+    margin: auto;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90%;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 3em 2.5em;
+    display: grid;
+    gap: 1em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    transform: var(--transform);
+    transition:var(--transition);
+}
+.modal__header{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.modal__title{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+.modal__text{
+    margin: 2% 2% 0;
+    padding: 0 2%;
+    font-size: larger;
+    font-weight: bolder;
+    letter-spacing: 0.5px;
+}
+.modal__close{
+    padding: 1em 3em;
+    background-color: #F26250;
+    color: #fff;
+    display: inline-block;
+    border: 1px solid ;
+    border-radius: 6px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: larger;
+    transition: background-color .1s;
+}
+.modal__close:hover{
+    color: #F26250;
+    background-color: #fff;
+}
+.win{
+    color: green;
+}
+.lose{
+    color: red;
+}
+.tie{
+    color: orange;
+}
+
+/*Media Query*/
+@media (max-width:800px) {
+
+    .modal__container{
+        padding: 2em 1.5em;
+        width: 80%;
+    }
+    .modal__close{
+        padding: 1em 2em;
+    }
+    .modal__title{
+        font-size: 2rem;
+    }
+}
+@media (max-width: 480px) {
+
+    .opcionesJuego {
+        background-color: cyan;
+        margin: 10% auto;
+        padding: 2%;
+        width: 90%;
+        height: 80%;
+        display: flex;
+        flex-flow: column wrap;
+      }
+}
