@@ -173,6 +173,9 @@ header{
         padding: 1%;
         margin: 2%;
     }
+    .boton{
+        width: 40%;
+    }
     .boxTheme{
         width: 40%;
     }
@@ -198,11 +201,12 @@ header{
     .boxTheme{
         width: 60%;
     }
-    .boton{
-        width: 40%;
-    }
+
     .opcionesJuego {
-        background-color: cyan;
+        background-image: url('/images/OIP.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
         margin: 10% auto;
         padding: 2%;
         width: 90%;
