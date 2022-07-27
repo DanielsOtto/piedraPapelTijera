@@ -3,20 +3,42 @@
   padding: 0;
   overflow: hidden;
 }
+.body--dark{
+    background-color: #18292C;
+}
 body{
     height: auto;
 }
+.opcionesJuego--ligth{
+    background-color: #c6c6c6;
+}
+.opcionesJuego--dark{
+    background-color: #426368;
+}
 .opcionesJuego {
-  background-color: cyan;
-  margin: 5% auto;
+  margin: auto;
   padding: 2%;
   width: 65%;
   height: 65%;
   display: flex;
   flex-flow: column wrap;
 }
+.btn--ligth{
+    background-color: #d2daed;
+}
+.btn--ligth:hover{
+    background-color: #d9ffe9;
+    cursor: pointer;
+}
+.btn--dark{
+    background-color: #03363d;
+}
+
+.btn--dark:hover{
+    cursor: pointer;
+    background-color: #174d4d;
+}
 .boton {
-  background-color: orange;
   color: black;
   margin: 3% auto;
   padding: 4%;
@@ -25,11 +47,20 @@ body{
   border-style: none;
   outline: none;
   text-transform: uppercase;
+  letter-spacing: 1px;
   font-weight: 900;
 }
-.boton:hover {
-  cursor: pointer;
-  background-color: orangered;
+.txt--white{
+    color: white;
+}
+.deshabilitado{
+    background-color: #272B2C;
+    font-weight: lighter;
+}
+.deshabilitado:hover{
+    background-color: black;
+    opacity: 0.8;
+    cursor: not-allowed;
 }
 .mayuscula{
     text-transform: uppercase;
@@ -39,6 +70,24 @@ body{
 }
 .pc{
     color: red;
+}
+/*HEADER*/
+header{
+    margin: 1%;
+    padding: 3%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.boxTheme{
+
+    width: 20%;
+    height: 100%;
+    display: flex;
+}
+.masOps{
+    width: 40%;
 }
 /*MODAL*/
 .modal{
@@ -78,12 +127,6 @@ body{
     grid-auto-columns: 100%;
     transform: var(--transform);
     transition:var(--transition);
-}
-.modal__header{
-    width: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 .modal__title{
     font-size: 2.5rem;
@@ -125,7 +168,14 @@ body{
 
 /*Media Query*/
 @media (max-width:800px) {
-
+    header{
+        width: 100%;
+        padding: 1%;
+        margin: 2%;
+    }
+    .boxTheme{
+        width: 40%;
+    }
     .modal__container{
         padding: 2em 1.5em;
         width: 80%;
@@ -138,7 +188,19 @@ body{
     }
 }
 @media (max-width: 480px) {
-
+    header{
+        width: 100%;
+        padding: 1%;
+        margin: 2%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .boxTheme{
+        width: 60%;
+    }
+    .boton{
+        width: 40%;
+    }
     .opcionesJuego {
         background-color: cyan;
         margin: 10% auto;

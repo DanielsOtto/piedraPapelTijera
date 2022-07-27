@@ -1,11 +1,73 @@
+const resultados = ["ganaste", "perdiste", "empataste"];
+const opcionesPC = ["piedra", "papel", "tijera"];
+const claro = document.getElementById("claro");
+const oscuro = document.getElementById("oscuro");
 const piedra = document.getElementById("piedra");
 const papel = document.getElementById("papel");
 const tijera = document.getElementById("tijera");
 const modalBox = document.getElementById("modal");
 const box = document.getElementById("boxGame");
-const body = document.getElementsByTagName("body");
-const resultados = ["ganaste", "perdiste", "empataste"];
-const opcionesPC = ["piedra", "papel", "tijera"];
+const body = document.getElementById("body");
+const h1 = document.getElementById("tit-1");
+
+const removerClases = (claseB, claseC)=> {
+
+    piedra.classList.remove(claseB);
+    papel.classList.remove(claseB);
+    tijera.classList.remove(claseB);
+    oscuro.classList.remove(claseB);
+    claro.classList.remove(claseB);
+    box.classList.remove(claseC);
+}
+
+const agregarClases = (claseB, claseC)=> {
+
+    piedra.classList.add(claseB);
+    papel.classList.add(claseB);
+    tijera.classList.add(claseB);
+    oscuro.classList.add(claseB);
+    claro.classList.add(claseB);
+    box.classList.add(claseC);
+}
+
+const agregarTxtBlanco = (color)=> {
+
+    h1.classList.add(color);
+    piedra.classList.add(color);
+    papel.classList.add(color);
+    tijera.classList.add(color);
+    claro.classList.add(color);
+}
+
+const quitarTxtBlanco = (color)=> {
+
+    h1.classList.remove(color);
+    piedra.classList.remove(color);
+    papel.classList.remove(color);
+    tijera.classList.remove(color);
+    claro.classList.remove(color);
+}
+
+claro.addEventListener('click', (e)=> {
+    e.preventDefault();
+    claro.classList.add("deshabilitado");
+    oscuro.classList.remove("deshabilitado");
+    quitarTxtBlanco("txt--white")
+    body.classList.remove("body--dark");
+    agregarClases("btn--ligth", "opcionesJuego--ligth");
+    removerClases("btn--dark", "opcionesJuego--dark");
+    // claroclassList.remove("btn--dark");  desabilitado clase
+})
+
+oscuro.addEventListener('click', (e)=> {
+    e.preventDefault();
+    oscuro.classList.add("deshabilitado");
+    claro.classList.remove("deshabilitado");
+    agregarTxtBlanco("txt--white");
+    body.classList.add("body--dark");
+    agregarClases("btn--dark", "opcionesJuego--dark");
+    removerClases("btn--ligth", "opcionesJuego--ligth");
+})
 
 const eleccionPC = ()=> {
     return Math.floor(Math.random()*opcionesPC.length);

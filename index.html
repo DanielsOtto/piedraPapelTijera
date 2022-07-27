@@ -12,14 +12,21 @@
     <script src="/scripts/main.js" async></script>
 </head>
 
-<body>
+<body id="body">
+    <header>
+        <h1 id="tit-1">Juego Piedra Papel y Tijera</h1>
+        <div class="boxTheme">
+            <button id="claro" class="boton btn--ligth masOps">claro</button>
+            <button id="oscuro" class="boton btn--ligth masOps deshabilitado" >oscuro</button>
+        </div>
+    </header>
 
-    <div id="boxGame" class="opcionesJuego">
-        <button id="piedra" value="piedra" class="boton" data-open="modal">piedra</button>
+    <div id="boxGame" class="opcionesJuego opcionesJuego--ligth">
+        <button id="piedra" value="piedra" class="boton btn--ligth" data-open="modal">piedra</button>
 
-        <button id="papel" value="papel" class="boton" data-open="modal">papel</button>
+        <button id="papel" value="papel" class="boton btn--ligth" data-open="modal">papel</button>
 
-        <button id="tijera" value="tijera" class="boton" data-open="modal">tijera</button>
+        <button id="tijera" value="tijera" class="boton btn--ligth" data-open="modal">tijera</button>
     </div>
 
     <section id="modal" class="modal">
